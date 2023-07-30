@@ -8,6 +8,6 @@ export default function App() {
     <div className = "flex flex-1 flex-col items-center text-sky-600 bg-white">
       <HomePage/> 
       <ContactForm/>
-    </div>
+    </div> 
   )
 }
