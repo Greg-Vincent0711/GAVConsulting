@@ -28,7 +28,7 @@ const ContactForm = () => {
       setFormData({email: "", message: ""})
   };
 
-  return (
+  return ( 
     <form onSubmit={(event) => sendEmail(event)} className="w-full max-w-md mx-auto p-4 flex flex-col items-center">
       <input
         type="email"
