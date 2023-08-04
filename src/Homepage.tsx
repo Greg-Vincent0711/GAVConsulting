@@ -1,6 +1,6 @@
 
-import bannerImage from "../src/images/bannerImage.png";
-import mobileImage from "../src/images/mobileImage.png";
+import bannerImage from "./bannerImage.png";
+import mobileImage from "./mobileImage.png";
 const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white">
