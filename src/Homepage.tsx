@@ -12,7 +12,7 @@ const HomePage = () => {
         <p className="text-3xl md:text-4xl leading-relaxed mt-5">
           G.A.V. Consulting provides a variety of services necessary to improve
           our client's business relative to their specific goals. Regardless of
-          whether said client is government-affiliated, a non-profit or
+          whether said client is government-affiliated, a non-profit or 
           for-profit, we have the skills to help their organization achieve 
           their goals - whether they be financial, performance-based, or
           otherwise. This statement is backed by a 17-year long track record in
