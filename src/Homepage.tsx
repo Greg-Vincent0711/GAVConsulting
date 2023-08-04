@@ -5,8 +5,8 @@ const HomePage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white">
       <picture>
-        <source srcSet={bannerImage} media="(min-width: 768px)" />
-        <img src={mobileImage} style={{ width: '100vw', height: 'auto' }} />
+        <source srcSet={bannerImage} media="(min-width: 768px)"/>
+        <img src={mobileImage} style={{ width: '100vw', height: 'auto' }}/>
       </picture> 
       <div className="max-w-3xl px-6 ">
         <p className="text-3xl md:text-4xl leading-relaxed mt-5">
