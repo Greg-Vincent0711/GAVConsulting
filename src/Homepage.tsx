@@ -13,7 +13,7 @@ const HomePage = () => {
           G.A.V. Consulting provides a variety of services necessary to improve
           our client's business relative to their specific goals. Regardless of
           whether said client is government-affiliated, a non-profit or
-          for-profit, we have the skills to help their organization achieve
+          for-profit, we have the skills to help their organization achieve 
           their goals - whether they be financial, performance-based, or
           otherwise. This statement is backed by a 17-year long track record in
           this field improving the overall well-being of companies across New
