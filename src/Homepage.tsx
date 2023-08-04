@@ -1,19 +1,14 @@
 
-
 import bannerImage from "./images/bannerImage.png";
-
+import mobileImage from "./images/mobileImage.png";
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white w-full">
-      <div className="w-full h-full sm:h-auto flex items-center justify-center">
-        <img
-          src={bannerImage}
-          className="w-full h-full sm:h-auto object-contain"
-          alt="Banner"
-        />
-      </div>
-
-      <div className="max-w-3xl px-6 py-12">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+      <picture>
+        <source srcSet={bannerImage} media="(min-width: 768px)" />
+        <img src={mobileImage} style={{ width: '100vw', height: 'auto' }} />
+      </picture>
+      <div className="max-w-3xl px-6">
         <p className="text-3xl md:text-4xl leading-relaxed mt-5">
           G.A.V. Consulting provides a variety of services necessary to improve
           our client's business relative to their specific goals. Regardless of
