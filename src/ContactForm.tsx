@@ -50,7 +50,7 @@ const ContactForm = () => {
         ) => setFormData({ ...formData, message: event.target.value })}
       />
       <button
-        className="mt-4 bg-transparent text-sky-600 border border-black hover:bg-sky-700 hover:text-white font-bold py-4 px-8 rounded-full text-xl"
+        className="mt-4 w-full h-full bg-transparent text-sky-600 border border-black hover:bg-sky-700 hover:text-white font-bold py-4 px-8 rounded-full text-xl"
       >
         Send
       </button>

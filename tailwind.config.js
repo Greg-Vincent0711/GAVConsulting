@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-
+      fade: {
+        "transition": "opacity 500ms ease-in-out"
+      }
     },
     screens: {
       'sm': '576px',
