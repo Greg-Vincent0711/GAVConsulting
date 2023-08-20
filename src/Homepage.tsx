@@ -4,13 +4,11 @@ import "./index.css";
 const HomePage = () => {
   const mainRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
-  console.log("current value of visible", visible)
   useEffect(() => {
-    const observerOptions = {root: null, rootMargin:"-20%"};
     const observer = new IntersectionObserver((observerEntries) => {
       const hpEntry = observerEntries[0];
       setVisible(hpEntry.isIntersecting);
-    }, observerOptions);
+    }, {root: null, rootMargin:"-20%"});
     mainRef.current && observer.observe(mainRef.current)
   });
   

@@ -1,7 +1,6 @@
 import { ChangeEvent, useState, useEffect, useRef } from "react";
 import "./index.css";
 import emailjs from "@emailjs/browser";
-
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -9,20 +8,13 @@ const ContactForm = () => {
   });
   const formSection = useRef<HTMLDivElement>(null);
   const [formVisible, setFormVisible] = useState(false);
-
-  console.log("current value of formvisible", formVisible);
   useEffect(() => {
-    const observerOptions = { root: null, rootMargin: "-80%" };
     const observer = new IntersectionObserver((observerEntries) => {
-      const hpEntry = observerEntries[0];
-      setFormVisible(hpEntry.isIntersecting);
-    }, observerOptions);
+      const formEntry = observerEntries[0];
+      setFormVisible(formEntry.isIntersecting);
+    }, { root: null, rootMargin: "-5%" });
     formSection.current && observer.observe(formSection.current)   
   });
-  
-
-  const sharedStyles =
-    "w-full h-full p-5 m-2 text-sky-600 text-2xl border border-black placeholder:text-2xl placeholder:text-sky-600 rounded-md resize-none";
   const sendEmail = (event: React.FormEvent) => {
     event.preventDefault();
     emailjs
@@ -44,15 +36,15 @@ const ContactForm = () => {
       );
     setFormData({ email: "", message: "" });
   };
-
+  const sharedStyles =
+    "w-full h-full p-5 m-2 text-sky-600 text-2xl border border-black placeholder:text-2xl placeholder:text-sky-600 rounded-md resize-none";
   return (
     <div ref={formSection} className={[
       "w-full max-w-md mx-auto p-4 flex flex-col items-center justify-center",
       formVisible ? "formVisible" : "formInvisible",
-    ].join("")} >
+    ].join(" ")} >
       <form
       onSubmit={(event) => sendEmail(event)}
-      
     >
       <input
         type="email"
@@ -66,14 +58,12 @@ const ContactForm = () => {
       <textarea
         placeholder="Send us an Inquiry"
         value={formData.message}
-        className={
-          "w-full h-36 p-5 m-2 text-2xl placeholder:text-2xl placeholder:text-sky-600 border border-black rounded-md resize-none placeholder:pt-1"
-        }
+        className={[sharedStyles, "placeHolder:pt-1 !h-36"].join(" ")}
         onChange={(
           event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
         ) => setFormData({ ...formData, message: event.target.value })}
       />
-      <button className={[sharedStyles, " hover:bg-sky-700 hover:text-white font-bold py-4 px-8 !rounded-full text-xl"].join("")}>
+      <button className={[sharedStyles,"hover:bg-sky-600 hover:text-white font-bold py-4 px-8 !rounded-full"].join(" ")}>
         Send
       </button>
     </form>

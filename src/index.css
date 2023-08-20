@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 .invisible {
-  position: relative;
   transform: translateY(50px);
   opacity: 0;
 }
@@ -11,11 +10,10 @@
   transition: 1.5s ease;
   opacity: 1;
 }
-
 .formInvisible {
   opacity: 0
 }
 .formVisible {
-  transition: 5s ease;
-  opacity: 0
+  transition: 1.5s ease;
+  opacity: 1
 }
