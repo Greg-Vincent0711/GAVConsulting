@@ -1,5 +1,5 @@
 import { INTRO, SERVICES } from "./content";
-const Services = () => (
+const Services: React.FC = () => (
   <section aria-labelledby="services-heading" className="space-y-6">
     <p className="text-base leading-relaxed text-slate-300 sm:text-lg">{INTRO}</p>
 
