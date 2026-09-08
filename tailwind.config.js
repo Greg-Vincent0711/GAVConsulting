@@ -18,6 +18,13 @@ export default {
         accent: {
           DEFAULT: "#38bdf8", // sky-400
           hover: "#7dd3fc", // sky-300
+          deep: "#075985", // sky-800 — accent that stays readable on light surfaces
+        },
+        // Off-white panel: warm, low-glare, sits with the ink palette rather than
+        // fighting it. Not pure #fff so it doesn't blow out against the dark page.
+        paper: {
+          DEFAULT: "#f4f6f8",
+          line: "#d9e0e6",
         },
       },
       fontFamily: {

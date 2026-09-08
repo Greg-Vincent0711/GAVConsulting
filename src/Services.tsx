@@ -3,10 +3,14 @@ const Services: React.FC = () => (
   <section aria-labelledby="services-heading" className="space-y-6">
     <p className="text-base leading-relaxed text-slate-300 sm:text-lg">{INTRO}</p>
 
-    <div>
+    {/*
+      Off-white panel with the palette inverted: on the dark page the services
+      read as a bright, editorial block — blue type, black markers, white chips.
+    */}
+    <div className="rounded-2xl bg-paper p-6 shadow-sm ring-1 ring-paper-line sm:p-8">
       <h2
         id="services-heading"
-        className="text-xl font-bold text-slate-100 sm:text-2xl"
+        className="text-xl font-bold text-ink sm:text-2xl"
       >
         Our Services
       </h2>
@@ -16,8 +20,8 @@ const Services: React.FC = () => (
           <li
             key={service}
             className="
-              flex items-start gap-3 rounded-lg border border-ink-line
-              bg-ink-soft px-4 py-2.5 text-sm text-slate-200 sm:text-base
+              flex items-center gap-3 rounded-lg border border-paper-line
+              bg-white px-4 py-2.5 text-sm text-ink sm:text-base
             "
           >
             <span aria-hidden="true" className="mt-1 text-accent">
